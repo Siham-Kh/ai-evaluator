@@ -70,6 +70,10 @@ The build files will be in the `dist` directory and can be served using any stat
    - Experience and role fit analysis
    - Recruiter insights
 
+
+## Deployment link
+https://ai-evaluator-seven.vercel.app/
+
 ## Technology Stack
 
 - **Frontend**: React.js, CSS3
@@ -83,11 +87,7 @@ You can customize the evaluation criteria by modifying the prompt sent to the Re
 
 ## API Integration
 
-This application uses the Relevance AI API to process and analyze candidate profiles against job descriptions. You'll need to:
-
-1. Create an account at [Relevance AI](https://relevance.ai)
-2. Set up an agent for candidate evaluation
-3. Update the `.env` file with your API key and agent ID
+This application uses a custom agent I created on Relevance AI. Then uses API to process and analyze candidate profiles against job descriptions
 
 ## Contributing
 
