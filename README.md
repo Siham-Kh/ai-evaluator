@@ -1,12 +1,113 @@
-# React + Vite
+# AI Candidate Evaluator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern web application that compares LinkedIn profiles against job descriptions to determine candidate fit.
 
-Currently, two official plugins are available:
+![AI Candidate Evaluator Screenshot](screenshot.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Overview
 
-## Expanding the ESLint configuration
+The AI Candidate Evaluator helps recruiters quickly assess how well a candidate matches a specific job role. By analyzing a LinkedIn profile URL and job description, the application provides a detailed assessment with scores, skill matches, and insights.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Features
+
+- **Profile Evaluation**: Input a LinkedIn profile URL and job description for analysis
+- **Match Scoring**: Get an overall match score out of 100
+- **Skills Assessment**: View a detailed breakdown of required skills vs. candidate experience
+- **Progress Tracking**: Real-time progress bar with elapsed time while the evaluation runs
+- **Detailed Insights**: Recruiter-focused insights including strengths, gaps, and recommendations
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v16.0.0 or higher)
+- npm (v8.0.0 or higher)
+
+### Installation
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/your-username/ai-candidate-evaluator.git
+   cd ai-candidate-evaluator
+   ```
+
+2. Install dependencies:
+   ```
+   npm install
+   ```
+
+3. Create a `.env` file in the root directory and add your API keys:
+   ```
+   VITE_RELEVANCE_API_KEY=your_relevance_api_key
+   VITE_AGENT_ID=your_relevance_agent_id
+   ```
+
+4. Start the development server:
+   ```
+   npm run dev
+   ```
+
+5. Open your browser and navigate to `http://localhost:5173`
+
+### Building for Production
+
+To create a production build:
+
+```
+npm run build
+```
+
+The build files will be in the `dist` directory and can be served using any static file server.
+
+## Usage
+
+1. Enter the candidate's LinkedIn profile URL in the first input field
+2. Paste the complete job description in the second input field
+3. Click "Evaluate Match" to run the analysis
+4. View the detailed results, including:
+   - Overall match score
+   - Skills match table
+   - Experience and role fit analysis
+   - Recruiter insights
+
+## Technology Stack
+
+- **Frontend**: React.js, CSS3
+- **Build Tool**: Vite
+- **API Integration**: Relevance AI API for candidate evaluation
+- **Styling**: Custom CSS with responsive design
+
+## Configuration
+
+You can customize the evaluation criteria by modifying the prompt sent to the Relevance AI API in the `handleRunAgent` function within `App.jsx`.
+
+## API Integration
+
+This application uses the Relevance AI API to process and analyze candidate profiles against job descriptions. You'll need to:
+
+1. Create an account at [Relevance AI](https://relevance.ai)
+2. Set up an agent for candidate evaluation
+3. Update the `.env` file with your API key and agent ID
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- Relevance AI for providing the evaluation API
+- All contributors who have helped improve this tool
+
+---
+
+Created by [Siham]
