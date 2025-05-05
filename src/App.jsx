@@ -1,5 +1,6 @@
 // import { useState } from "react";
 import { useState, useEffect } from "react";
+import GoogleAd from './GoogleAd';
 import "./App.css"; 
 
 const API_KEY = "ab350910833c-4e35-998e-670bda429efd:sk-ZmE3MDNhNzQtMzAyMi00NjUzLTk5N2UtMDE5ZWExMThiZDU5";
@@ -126,6 +127,9 @@ export default function App() {
         <p className="text-gray-600 mb-6">This recruiter finds if a candidate matches the post</p>
       </div>
       
+      {/* Ad placement below header */}
+      <GoogleAd slot="1234567890" />
+
       {/* Form */}
       <div className="form-container">
         <div className="input-group">
